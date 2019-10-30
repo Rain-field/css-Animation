@@ -1,0 +1,265 @@
+.section-title {
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.section-title h2 {
+    display: block;
+    font-size: 40px;
+    line-height: 1.2em;
+    color: #333333;
+    padding-bottom: 15px;
+}
+.section-title h2 span {
+    font-size: 24px;
+    color: #999;
+}
+.section-title h2::before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 120px;
+    height: 7px;
+    content: "";
+    background-image: url(../images/devider-blue.png);
+}
+.section-title h3 {
+    position: relative;
+    display: block;
+    font-size: 20px;
+    line-height: 1.2em;
+    color: #333333;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.text {
+    font-size: 14px;
+    line-height: 25px;
+    color: #777777;
+    font-weight: 400;
+}
+.overlay-box {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+/* 图片悬浮(图文混合) */
+.imgtxt-hover {
+    background: url(../images/1.jpg) no-repeat;
+}
+.imgtxt-hover-item{
+    margin-bottom: 25px;
+}
+.imgtxt-hover-box{
+    padding: 55px 50px 50px;
+    text-align: center;
+    position: relative;
+}
+.imgtxt-hover-img {
+    display: inline-block;
+    height: 120px;
+    width: 120px;
+    /* border-radius: 50%; */
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+.imgtxt-hover-item .imgtxt-hover-img img {
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+}
+/* 翻转图片1 */
+#imgtxt-hover-item1 .imgtxt-hover-box:hover img {
+    transform: rotateY(180deg);
+}
+#imgtxt-hover-item1 .imgtxt-hover-box:hover h3 {
+    color: #fdc735;
+    transition: all 0.5s;
+}
+a:hover {
+    text-decoration: none;
+    color: #d7a449;
+}
+/* 翻转整体2 */
+#imgtxt-hover-item2 .imgtxt-hover-box {
+    background-color: rgba(0,0,0,.1);
+}
+#imgtxt-hover-item2 .overlay-box {
+    transform: perspective(400px) rotateY(-90deg);
+    transform-origin: right;
+}
+#imgtxt-hover-item2 .overlay-box img{
+    text-align: center;
+    width: 64px;
+    height: 64px;
+}
+#imgtxt-hover-item2 .overlay-box .steps1 {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 20px;
+    background: #000;
+    color: #ffffff;
+    border-radius: 0 20px 20px 0;
+    width: 40%;
+}
+#imgtxt-hover-item2 .imgtxt-hover-box:hover .overlay-box{
+    opacity: 1;
+    background-color: #fdc735;
+    transform: perspective(400px) rotateY(0deg);
+}
+/* 图片悬浮(纯图片) */
+.img-hover .section-title h2::before{
+    background-image: url(../images/devider-pink.png);
+}
+.img-hover-img {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 25px;
+    width: 100%;
+}
+.img-hover-item img {
+    transition: 0.5s ease;
+    width: 100%;
+}
+/* 图片伸缩1 */
+#img-hover-item1 .img-hover-img:hover img {
+    transform: scale(1.2);
+}
+/* 图片伸缩2 */
+#img-hover-item2 img {
+    transform: scale(1.2);
+}
+#img-hover-item2 .img-hover-img:hover img {
+    transform: scale(1);
+}
+/* 图片背景3 */
+
+#img-hover-item3 .overlay-box{
+    padding: 50px 30px;
+    background-color: rgba(253,199,53,.9);
+    transform: scale(1.5);
+}
+#img-hover-item3 .overlay-box a {
+    background: url(../images/img3.jpg) no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100px;
+    width: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+    border-radius: 50%;
+    background-position: center;
+    z-index: 9;
+}
+#img-hover-item3 .overlay-box .icon {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/plus-icon.png);
+    transition: all 0.5s;
+}
+#img-hover-item3 .img-hover-img:hover .overlay-box {
+    opacity: 1;
+    transform: scale(1);
+}
+/* 遮罩加缩放4 */
+#img-hover-item4 .img-hover-img {
+    background: #101010;
+}
+#img-hover-item4 .img-hover-img:hover img {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+/* 右侧滑动标签5 */
+#img-hover-item5 .read-more {
+    position: absolute;
+    right: 0px;
+    bottom: 26px;
+    left: 50%;
+    color: #252525;
+    font-size: 16px;
+    opacity: 0;
+    padding: 15px 25px;
+    transition: all 500ms ease;
+    background-color: rgba(255,255,255,0.80);
+}
+#img-hover-item5 .read-more a {
+    position: relative;
+    color: #252525;
+    font-weight: 700;
+    transition: all 500ms ease;
+}
+#img-hover-item5 .img-hover-img:hover .read-more {
+    left: 55px;
+    opacity: 1;
+}
+    
+#img-hover-item5 .read-more a:hover {
+    color: #d7a449;
+}
+/* 遮罩+上下同时滑动出6 */
+#img-hover-item6 .overlay-box>a{
+    position: absolute;
+    right: 30px;
+    top: -50px;
+    color: #ffffff;
+    font-size: 26px;
+    transition: all 500ms ease;
+}
+#img-hover-item6 .img-hover-img:hover .overlay-box{
+    background-color: rgba(37,37,37,0.8);
+    opacity: 1;
+
+}
+#img-hover-item6 .img-hover-img:hover a{
+    top: 15px;
+    opacity: 1;
+}
+#img-hover-item6 .overlay-box a:hover {
+    color: #d7a449;
+}
+#img-hover-item6 .overlay-box .bottom-content{
+    position: absolute;
+    width: 100%;
+    bottom: -50px;
+    left: 20px;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+#img-hover-item6 .overlay-box:hover .bottom-content{
+    bottom: 20px;
+}
+#img-hover-item6 .bottom-content h2 a{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 0.8s;
+}
+#img-hover-item6 .bottom-content .text{
+    color: #d7a449;
+}
+/* 遮罩+边框+上滑出文字介绍7 */
+#img-hover-item7 a {
+    color: #fdc735;
+}
+#img-hover-item7 .overlay-box {
+    transform: translateY(-100%);
+    border: 4px solid #d7a449;
+}
+#img-hover-item7 .img-hover-img:hover .overlay-box {
+    transform: translateY(0%);
+    background-color: #101010;
+    opacity: 1;
+}
