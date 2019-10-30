@@ -10,12 +10,12 @@
 /* 字体 */
 @font-face {
 	font-family: 'iconfont';  /* project id 1480644 */
-	src: url('//at.alicdn.com/t/font_1480644_jx9l6zi4p5.eot');
-	src: url('//at.alicdn.com/t/font_1480644_jx9l6zi4p5.eot?#iefix') format('embedded-opentype'),
-	url('//at.alicdn.com/t/font_1480644_jx9l6zi4p5.woff2') format('woff2'),
-	url('//at.alicdn.com/t/font_1480644_jx9l6zi4p5.woff') format('woff'),
-	url('//at.alicdn.com/t/font_1480644_jx9l6zi4p5.ttf') format('truetype'),
-	url('//at.alicdn.com/t/font_1480644_jx9l6zi4p5.svg#iconfont') format('svg');
+	src: url('//at.alicdn.com/t/font_1480644_veawe8tvnrn.eot');
+	src: url('//at.alicdn.com/t/font_1480644_veawe8tvnrn.eot?#iefix') format('embedded-opentype'),
+	url('//at.alicdn.com/t/font_1480644_veawe8tvnrn.woff2') format('woff2'),
+	url('//at.alicdn.com/t/font_1480644_veawe8tvnrn.woff') format('woff'),
+	url('//at.alicdn.com/t/font_1480644_veawe8tvnrn.ttf') format('truetype'),
+	url('//at.alicdn.com/t/font_1480644_veawe8tvnrn.svg#iconfont') format('svg');
   }
 .iconfont {
 	font-family: iconfont;
@@ -396,6 +396,12 @@
 }
 .text-white {
 	color: #fff;
+}
+.text-yellow {
+	color: #fdc735;
+}
+.text-red {
+	color: #ff384f;
 }
 /* 布局 */
 .flex {

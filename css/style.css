@@ -247,7 +247,7 @@ a:hover {
     font-weight: 700;
     transition: all 0.8s;
 }
-#img-hover-item6 .bottom-content .text{
+#img-hover-item6 .bottom-content .text {
     color: #d7a449;
 }
 /* 遮罩+边框+上滑出文字介绍7 */
@@ -261,5 +261,17 @@ a:hover {
 #img-hover-item7 .img-hover-img:hover .overlay-box {
     transform: translateY(0%);
     background-color: #101010;
+    opacity: 1;
+}
+/* 遮罩从0.6到1倍8 */
+#img-hover-item8 .overlay-box {
+    transform: scale(0.6);
+    background: rgba(0,0,0,.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#img-hover-item8 .img-hover-img:hover .overlay-box {
+    transform: scale(1);
     opacity: 1;
 }
